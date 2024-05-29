@@ -1,7 +1,6 @@
 ---
  - name:  provisioning S3 Bucket using Ansible playbook
    hosts: localhost
-   ansible_python_interpreter: /usr/bin/python3
 
    tasks:
      - name: create S3 bucket
@@ -13,7 +12,3 @@
          tags:
            name: myansiblebucket
            type: example
-       register: s3_url
-
-     - name: Display s3 url
-       debug: var=s3_url
