@@ -1,9 +1,7 @@
 ---
  - name:  provisioning S3 Bucket using Ansible playbook
    hosts: localhost
-   "ansible_become": true
-   gather_facts: False
-   tags: provisioning
+   become: true
 
    tasks:
      - name: create S3 bucket
