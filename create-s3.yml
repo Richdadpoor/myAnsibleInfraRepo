@@ -3,6 +3,13 @@
    hosts: localhost
 
    tasks:
+     - name: Ensure boto and boto3 modules are installed
+       pip:
+         name: "{{ item }}"
+       with_items:
+          - boto3
+          - botocore
+       delegate_to: "{{ 172-31-16-245 }}"
      - name: create S3 bucket
        s3_bucket:
          name: sudhan-devops-bucket
