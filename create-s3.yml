@@ -1,7 +1,6 @@
 ---
  - name:  provisioning S3 Bucket using Ansible playbook
    hosts: localhost
-   become: true
 
    tasks:
      - name: create S3 bucket
@@ -9,9 +8,9 @@
          name: sudhan-devops-bucket
          state: present
          region: eu-central-1
-         versioning: yes
+         versioning: no
          tags:
-           name: first_jenkins_bucket
+           name: myansiblebucket
            type: example
        register: s3_url
 
