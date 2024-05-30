@@ -1,7 +1,6 @@
 ---
  - name:  provisioning S3 Bucket using Ansible playbook
    hosts: all
-   become: true
 
    tasks:
      - name: create S3 bucket
