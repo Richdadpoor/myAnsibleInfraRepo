@@ -8,6 +8,7 @@
          name: sudhan-devops-bucket
          state: present
          region: eu-central-1
+         versioning: no
          tags:
            name: myansiblebucket
            type: example
